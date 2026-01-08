@@ -18,7 +18,7 @@
             overflow-x: hidden;
         }
 
-        /* Glassmorphism Logic */
+        /* Glassmorphism Cards */
         .glass {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
             backdrop-filter: blur(15px);
@@ -27,7 +27,12 @@
             transition: all 0.4s ease;
         }
 
-        /* 3D Container Fix: Ensures the sculpture maximizes the interface */
+        .glass:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* 3D Container Fix */
         .sculpture-container {
             width: 100%;
             height: 100%;
@@ -45,7 +50,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Skills Scroll */
+        /* Skills Marquee */
         .marquee {
             display: flex;
             overflow: hidden;
@@ -86,18 +91,18 @@
 
     <main class="max-w-7xl mx-auto">
         
-        <!-- Hero Section: Text + Real 3D Sculpture -->
+        <!-- Hero Section: Identity + Interactive 3D Sculpture -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
             <div class="md:col-span-7 glass p-12 flex flex-col justify-center">
                 <h2 class="text-7xl md:text-8xl font-extrabold tracking-tighter text-gradient leading-tight mb-8">
-                    JOSEPHINE ALLAN
+                    JOSEPHINE<br>ALLAN
                 </h2>
                 <p class="text-gray-400 text-lg max-w-md leading-relaxed">
-                    Student at Ashesi University with a focus on computer science and digital marketing experiences.
+                    Computer Science student at Ashesi University with experience in IT systems, web development, and leadership.
                 </p>
             </div>
             
-            <!-- FIXED: Interactive 3D Sculpture replaces the broken image -->
+            <!-- Interactive 3D Sculpture -->
             <div class="md:col-span-5 glass sculpture-container overflow-hidden">
                 <spline-viewer url="https://prod.spline.design/6Wq1Q7YEB9C8hTbe/scene.splinecode"></spline-viewer>
             </div>
@@ -133,52 +138,56 @@
                 <div class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mb-6">
                     <i class="fas fa-certificate text-3xl text-white"></i>
                 </div>
-                <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Achievements</h3>
+                <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Achievement</h3>
                 <h4 class="text-2xl font-bold">IC3 GS5 Certification</h4>
                 <p class="text-gray-500 mt-2">2023</p>
             </div>
         </section>
 
-        <!-- Work Experience -->
+        <!-- Work Experience (Focus on Portlink) -->
         <h3 class="text-3xl font-bold mb-8 px-4">Experience</h3>
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div class="glass p-10">
-                <span class="text-xs font-mono text-gray-500">June 2025 – July 2025</span>
-                <h4 class="text-2xl font-bold mt-4 mb-4">Portlink Ghana Limited</h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                    Worked as an IT personnel creating new websites for them and helping to improve their social media presence.
-                </p>
-                <div class="space-y-2">
-                    <a href="https://portlinkghana.com/" target="_blank" class="block text-sm text-blue-400 hover:text-white transition italic underline">portlinkghana.com ↗</a>
-                    <a href="https://capitalshippingghana.com/" target="_blank" class="block text-sm text-blue-400 hover:text-white transition italic underline">capitalshippingghana.com ↗</a>
+        <section class="grid grid-cols-1 gap-6 mb-6">
+            <div class="glass p-10 border-l-4 border-white">
+                <div class="flex flex-col md:flex-row justify-between md:items-center mb-6 gap-4">
+                    <div>
+                        <h4 class="text-3xl font-bold">Portlink Ghana Limited</h4>
+                        <p class="text-gray-400 font-medium">IT Personnel</p>
+                    </div>
+                    <span class="text-sm font-mono text-gray-500 px-4 py-2 bg-white/5 rounded-full">June 2025 – July 2025</span>
                 </div>
-            </div>
-
-            <div class="glass p-10">
-                <span class="text-xs font-mono text-gray-500">2020 – 2024</span>
-                <h4 class="text-2xl font-bold mt-4 mb-4">The Dough Place</h4>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    I worked as a marketer for a dough place which is an online bakery shop. I marketed their products to the public through social media, sending out samples of their products to likely customers and speaking to the customers about the delicious pastries sold by the dough place.
+                <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-4xl">
+                    Worked as an IT personnel creating new websites and helping to improve their social media presence. Below are links to websites I helped create using WordPress:
                 </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="https://portlinkghana.com/" target="_blank" class="flex items-center gap-3 px-6 py-4 glass hover:bg-white hover:text-black transition-all">
+                        <i class="fas fa-link"></i>
+                        <span>portlinkghana.com</span>
+                    </a>
+                    <a href="https://capitalshippingghana.com/" target="_blank" class="flex items-center gap-3 px-6 py-4 glass hover:bg-white hover:text-black transition-all">
+                        <i class="fas fa-link"></i>
+                        <span>capitalshippingghana.com</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Co-Curricular Activities -->
+        <h3 class="text-2xl font-bold mb-6 px-4">Co-Curricular Activities</h3>
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div class="glass p-8">
                 <h4 class="font-bold mb-2">Ambassadors On Assignment</h4>
-                <p class="text-xs text-gray-500 mb-4 font-bold uppercase">Leader • 2022-2023</p>
-                <p class="text-sm text-gray-400">Leading others in the group when going out on evangelism and teaching fellow members the word of God.</p>
+                <p class="text-xs text-gray-500 mb-4 font-bold uppercase tracking-tighter">Leader • 2022-2023</p>
+                <p class="text-sm text-gray-400 leading-relaxed">Appointed as one of the heads to lead others in evangelism and teaching fellow members the word of God.</p>
             </div>
             <div class="glass p-8">
                 <h4 class="font-bold mb-2">Dorm Head</h4>
-                <p class="text-xs text-gray-500 mb-4 font-bold uppercase">2022-2023</p>
-                <p class="text-sm text-gray-400">Assigned the girls in my dorm their tasks and inspected all their activities and work in the dorm.</p>
+                <p class="text-xs text-gray-500 mb-4 font-bold uppercase tracking-tighter">2022-2023</p>
+                <p class="text-sm text-gray-400 leading-relaxed">Assigned the girls in my dorm their tasks and inspected all their activities and work in the dorm.</p>
             </div>
             <div class="glass p-8">
                 <h4 class="font-bold mb-2">Project Smile</h4>
-                <p class="text-xs text-gray-500 mb-4 font-bold uppercase">Volunteer • 2021</p>
-                <p class="text-sm text-gray-400">Responsible for accumulating funds from various people to support less privileged people.</p>
+                <p class="text-xs text-gray-500 mb-4 font-bold uppercase tracking-tighter">Volunteer • 2021</p>
+                <p class="text-sm text-gray-400 leading-relaxed">Responsible for accumulating funds from various people to support less privileged people.</p>
             </div>
         </section>
 
